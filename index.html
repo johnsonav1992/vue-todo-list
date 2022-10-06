@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Vue Todo</title>
-</head>
-<body>
-    <main id="app">
-        <form action="submit">
-            <input type="text" v-model="textInput" placeholder="Type a todo item">
-            <button @click="addTodo">+</button>
-        </form>
-        <section>
-            <ul>
-                <li v-for="todo in todoList" :key="todo">{{ todo }} <button @click="deleteTodo(todo)"> - </button></li>
-            </ul>
-        </section>
-    </main>   
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+		<script src="./script.js" defer></script>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Vue Todo</title>
+	</head>
+	<body>
+		<main id="app">
+			<form action="submit">
+				<input
+					type="text"
+					v-model="textInput"
+					placeholder="Type a todo item"
+				/>
+				<button @click="addTodo">+</button>
+			</form>
+			<section>
+				<ul>
+					<li v-for="todo in todoList" :key="todo">
+						{{ todo }} <button @click="deleteTodo(todo)">-</button>
+					</li>
+				</ul>
+			</section>
+		</main>
+	</body>
 </html>
